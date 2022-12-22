@@ -2,7 +2,7 @@ package main
 //FMT stands for Format Package
 import "fmt"
 
-func main (){
+func app (){
 	var conferenceName = "Go Conference"
 	const conferenceTickets = 50
 	var remainingTickets = 50;	
@@ -50,5 +50,26 @@ func main (){
 	myName := "Aryan"; 
 	// this way doesn't work for constants and when we explicitly want to 
 	// declare a var for eg: var remainingTickets uint = 50
-	fmt.Printf("%v", myName)
+	fmt.Printf("%v\n", myName)
+
+	/*
+		Different functions of formatted I/O is
+		- printing messages
+		- collect user input
+		- write into a file
+	*/
+
+	// Taking user input
+	var name string
+	var tickets int
+
+	fmt.Scan(&name)
+	tickets = 50
+
+	fmt.Printf("User %v booked %v tickets for the conference\n", name, tickets);
+
+	fmt.Println(remainingTickets);
+	fmt.Println(&remainingTickets); // prints address of variable
+	// a pointer is a variable that points to the memory address of another variable
+	// that references the original variable, pointers are also known as special variables
 }
